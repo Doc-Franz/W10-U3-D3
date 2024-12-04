@@ -52,9 +52,8 @@ class MyMovies extends Component {
           <Row className="cover-grid row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2">
             {this.state.movies.slice(0, 6).map((movie) => (
               <div key={movie.imdbID}>
-                <img src={movie.Poster} key={movie.imdbID} style={{ cursor: "pointer" }} className="img-fluid" />
-                <Link to={`/movie-details/${movie.imdbID}`} className="btn btn-info mt-3">
-                  Details
+                <Link to={`/movie-details/${movie.imdbID}`} style={{ textDecoration: "none" }}>
+                  <img src={movie.Poster} key={movie.imdbID} style={{ cursor: "pointer" }} className="img-fluid" />
                 </Link>
               </div>
             ))}

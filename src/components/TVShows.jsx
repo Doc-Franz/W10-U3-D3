@@ -1,4 +1,5 @@
 import { Col, Container, Form, Row } from "react-bootstrap";
+import MyMovies from "./MyMovies";
 
 const TVShows = () => {
   return (
@@ -11,6 +12,9 @@ const TVShows = () => {
           <Form.Control type="text" id="searchMovie" placeholder="Cerca Serie TV..." />
         </Col>
       </Row>
+      <MyMovies movie="Star Wars" />
+      <MyMovies movie="Harry Potter" />
+      <MyMovies movie="The lord of the rings" />
     </Container>
   );
 };
